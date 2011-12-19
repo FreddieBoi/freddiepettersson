@@ -5,8 +5,13 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
 
+group :production do
+  gem 'pg'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -26,10 +31,13 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
+gem 'devise'
+
+group :development do
+  gem 'annotate-models'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-gem 'devise'
+end
 
 group :test do
   # Pretty printed test output
