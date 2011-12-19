@@ -12,6 +12,7 @@ end
 group :production do
   gem 'pg'
 end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -34,12 +35,11 @@ gem 'jquery-rails'
 gem 'devise'
 
 group :development do
-  gem 'annotate-models'
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+  # To use debugger
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :test do
-  # Pretty printed test output
+# Pretty printed test output
   gem 'turn', '0.8.2', :require => false
 end
