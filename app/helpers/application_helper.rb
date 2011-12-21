@@ -1,5 +1,10 @@
 module ApplicationHelper
   include TweetButton
+  
+  def app_title
+    "freddiepettersson"
+  end
+  
   # Set the page title
   def title(page_title)
     content_for(:title) { page_title }

@@ -1,0 +1,22 @@
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to "Contact", contact_path %>
+      </li>
+    </ul>
+  </nav>
+  <p id="copyright-notes">
+    <%= link_to app_title, root_path %> &copy; 2011 <%= mail_to "freddieboi@gmail.com", "Freddie Pettersson" %>
+  </p>
+  <div id="tweet-button">
+    <%= tweet_button %>
+  </div>
+  <div id="like-button">
+    <%= facebook_like_button %>
+  </div>
+  </div>
+</footer>

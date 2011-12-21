@@ -17,8 +17,15 @@
       </header>
       <nav>
         <ul>
+          <li>
+            <%= link_to "Home", root_path %>
+          </li>
+          <li>
+            <%= link_to "Contact", contact_path %>
+          </li>
           <% if user_signed_in? %>
           <li>
+            <%= gravatar_for current_user, :size => 30 %>
             <%= link_to current_user.email, edit_user_registration_path %>
           </li>
           <li>
@@ -39,9 +46,7 @@
       <% end %>
 
       <%= yield %>
-      <footer>
-        <%= link_to "freddiepettersson", root_path %> &copy; 2011 <%= mail_to "freddieboi@gmail.com", "Freddie Pettersson" %>
-      </footer>
+      <%= render "layouts/footer" %>
     </div>
     <%= debug(params) if Rails.env.development? %>
   </body>

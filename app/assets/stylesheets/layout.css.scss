@@ -1,5 +1,6 @@
 body {
-  background: #222;
+  background: #fff;
+  font-family: sans-serif;
 }
 #container {
   width: 720px;
@@ -13,9 +14,8 @@ header {
 /* Navigation */
 nav {
   background-color: white;
-  padding: 0 0.7em;
+  padding: 0;
   white-space: nowrap;
-  margin-bottom: 20px;
 }
 nav ul {
   margin: 0;
@@ -24,10 +24,10 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 0.2em 0;
+  padding: 0;
 }
 nav ul li a {
-  padding: 0 5px;
+  padding: 0;
   font-weight: bold;
 }
 div.field, div.actions {
@@ -69,9 +69,13 @@ div.field, div.actions {
   list-style: square;
 }
 footer {
-  text-align: center;
-  margin-top: 20px;
-  width: 710px;
-  margin-left: auto;
-  margin-right: auto;
+}
+img.gravatar {
+  border: 1px solid #999;
+}
+h2 img.gravatar {
+  margin-bottom: -15px;
+}
+li img.gravatar {
+  margin-bottom: -12px;
 }
