@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/Person">
   <head>
     <title>Freddie Pettersson<%= content_for?(:title) ? " - #{yield(:title)}" : ""%></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <link rel="shortcut icon" href="/favicon.ico" />
+    <meta itemprop="name" content="Freddie Pettersson">
+    <meta itemprop="description" content="Coffee, code, liquorice and punkrawk!">
   </head>
   <body>
     <div id="container">
       <%= render "layouts/header" %>
+
       <% flash.each do |key, value| %>
       <%= content_tag(:div, value, :class => "flash #{key}") %>
       <% end %>
