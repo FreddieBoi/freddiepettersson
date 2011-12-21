@@ -11,6 +11,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'thin'
 end
 
 # Gems used only for assets and not required
@@ -41,7 +42,7 @@ gem 'client_side_validations'
 gem 'disqus'
 
 group :development do
-  # To use debugger
+# To use debugger
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
 

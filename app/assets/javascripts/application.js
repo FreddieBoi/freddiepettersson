@@ -9,7 +9,7 @@
 //= require_self
 //= require_tree .
 
-<!--Google plus one button -->
+// Google plus one button
 (function() {
   var po = document.createElement('script');
   po.type = 'text/javascript';
