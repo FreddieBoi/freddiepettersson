@@ -21,6 +21,10 @@ log/*.log
 *.swp
 *~
 
+#Ignore assets cache
+.sass-cache/
+public/assets/
+
 # Ignore doc
 doc/
 

@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Freddie Pettersson</title>
+    <title>Freddie Pettersson<%= content_for?(:title) ? " - #{yield(:title)}" : ""%></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body>
-    <p class="notice">
-      <%= notice %>
-    </p>
-    <p class="alert">
-      <%= alert %>
-    </p>
-    <%= yield %>
+    <div id="container">
+      <header>
+        <h1>Freddie Pettersson</h1>
+        <p>
+          <em>Coffee, code, licorice and punkrawk!</em>
+        </p>
+      </header>
+      <nav>
+        <ul>
+          <% if user_signed_in? %>
+          <li>
+            <%= link_to current_user.email, edit_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to "Sign out", destroy_user_session_path %>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to "Sign in", new_user_session_path %>
+          </li>
+          <li>
+            <%= link_to "Sign up", new_user_registration_path %>
+          </li>
+          <% end %>
+        </ul>
+      </nav>
+      <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, :class => "flash #{key}") %>
+      <% end %>
+
+      <%= yield %>
+      <footer>
+        <%= link_to "freddiepettersson", root_path %> &copy; 2011 <%= mail_to "freddieboi@gmail.com", "Freddie Pettersson" %>
+      </footer>
+    </div>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

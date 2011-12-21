@@ -33,6 +33,12 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 gem 'devise'
+gem 'friendly_id'
+gem 'gravatar_image_tag'
+gem 'will_paginate'
+gem 'tweet-button'
+gem 'client_side_validations'
+gem 'disqus'
 
 group :development do
   # To use debugger
