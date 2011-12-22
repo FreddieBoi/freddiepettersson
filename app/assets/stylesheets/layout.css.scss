@@ -1,81 +1,83 @@
 body {
-  background: #fff;
-  font-family: sans-serif;
+	background:#403834;
+	font-family:sans-serif;
 }
 #container {
-  width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  background: white;
+	border:10px solid #452B33;
+	width:720px;
+	margin-left:auto;
+	margin-right:auto;
+	background:#A6B5A1;
 }
 header {
+	padding:20px;
+	background:#693B3E;
+	border-bottom:10px solid #452B33;
 }
 /* Navigation */
 nav {
-  background-color: white;
-  padding: 0;
-  white-space: nowrap;
+	padding:0;
+	white-space:nowrap;
 }
 nav ul {
-  margin: 0;
-  padding: 0;
+	margin:0;
+	padding:0;
 }
 nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0;
+	list-style-type:none;
+	display:inline-block;
+	padding:0;
 }
 nav ul li a {
-  padding: 0;
-  font-weight: bold;
+	padding:0;
+	font-weight:bold;
 }
 div.field, div.actions {
-  margin-bottom: 10px;
+	margin-bottom:10px;
 }
 .field_with_errors {
-  margin-top: 10px;
-  padding: 2px;
-  background-color: red;
-  display: table;
+	margin-top:10px;
+	padding:2px;
+	background-color:red;
+	display:table;
 }
 .field_with_errors label {
-  color: #fff;
+	color:#fff;
 }
 #error_explanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+	width:400px;
+	border:2px solid red;
+	padding:7px;
+	padding-bottom:12px;
+	margin-bottom:20px;
+	background-color:#f0f0f0;
 }
 #error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+	text-align:left;
+	font-weight:bold;
+	padding:5px 5px 5px 15px;
+	font-size:12px;
+	margin:-7px;
+	background-color:#c00;
+	color:#fff;
 }
 #error_explanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+	color:#333;
+	margin-bottom:0;
+	padding:5px;
 }
 #error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+	font-size:12px;
+	list-style:square;
 }
 footer {
 }
 img.gravatar {
-  border: 1px solid #999;
+	border:1px solid #999;
 }
 h2 img.gravatar {
-  margin-bottom: -15px;
+	margin-bottom:-15px;
 }
 li img.gravatar {
-  margin-bottom: -12px;
+	margin-bottom:-12px;
 }

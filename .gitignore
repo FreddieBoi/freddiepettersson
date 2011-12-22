@@ -23,7 +23,6 @@ log/*.log
 
 #Ignore assets cache
 .sass-cache/
-public/assets/
 
 # Ignore doc
 doc/
