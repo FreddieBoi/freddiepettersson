@@ -29,4 +29,7 @@ Freddiepettersson::Application.configure do
   config.assets.debug = true
 
   config.assets.compile = true
+
+  # Configure Disqus
+  Disqus::defaults[:developer] = true # if you want to test it on the localhost
 end
