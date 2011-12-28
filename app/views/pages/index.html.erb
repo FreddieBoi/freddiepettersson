@@ -1,0 +1,14 @@
+<% title "Pages" %>
+<h2>Pages</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Last Updated At</th>
+  </tr>
+  <% @pages.each do |page| %>
+  <tr>
+    <td><%= link_to page.title, page %></td>
+    <td><%= page.last_updated_at %></td>
+  </tr>
+  <% end %>
+</table>

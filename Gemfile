@@ -33,10 +33,11 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-gem 'devise'
 gem 'friendly_id'
 gem 'gravatar_image_tag'
-gem 'will_paginate'
+gem "meta_search",    '>= 1.1.0.pre'
+gem 'kaminari'
+gem 'activeadmin'
 gem 'tweet-button'
 gem 'client_side_validations'
 gem 'disqus'

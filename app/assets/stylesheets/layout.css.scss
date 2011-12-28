@@ -1,88 +1,79 @@
 body {
-	background:#403834;
-	font-family:sans-serif;
-}
-#container {
-	border:10px solid #452B33;
-	width:720px;
-	margin-left:auto;
-	margin-right:auto;
-	background:#A6B5A1;
-}
-header {
-	padding:20px;
-	background:#693B3E;
-	border-bottom:10px solid #452B33;
-}
-/* Navigation */
-nav {
-	padding:0;
-	white-space:nowrap;
-}
-nav ul {
-	margin:0;
-	padding:0;
-}
-nav ul li {
-	list-style-type:none;
-	display:inline-block;
-	padding:0;
-}
-nav ul li a {
-	padding:0;
-	font-weight:bold;
-}
-footer {
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 
-/* Gravatar */
-img.gravatar {
-	border:1px solid #999;
-}
-li img.gravatar {
-	margin-bottom:-12px;
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 
-/* Flash */
-.error, .alert, .notice, .success, .info {
+pre {
+  background-color: #eee;
   padding: 10px;
-  margin: 2px 0 0;
-  border:2px solid #ddd;
-}
-.error, .alert {
-  background:#fbe3e4;
-  color:#8a1f11;
-  border-color:#fbc2c4;
-}
-.notice {
-  background:#fff6bf;
-  color:#514721;
-  border-color:#ffd324;
-}
-.success {
-  background:#e6efc2;
-  color:#264409;
-  border-color:#c6d880;
-}
-.info {
-  background:#d5edf8;
-  color:#205791;
-  border-color:#92cae4;
-}
-.error a, .alert a {
-  color:#8a1f11;
-}
-.notice a {
-  color:#514721;
-}
-.success a {
-  color:#264409;
-}
-.info a {
-  color:#205791;
+  font-size: 11px;
 }
 
-/* Disqus */
-#disqus_thread {
-  /*background: #444;*/
+a {
+  color: #000;
+  &:visited {
+    color: #666; }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; 
+  } 
+}
+    
+nav {
+  ul {
+    li {
+      list-style-type: none;
+      display: inline-block;
+    }
+  }
 }

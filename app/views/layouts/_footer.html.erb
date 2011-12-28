@@ -7,6 +7,9 @@
       <li>
         <%= link_to "Contact", contact_path %>
       </li>
+      <li>
+        <%= link_to "Bio", bio_path %>
+      </li>
     </ul>
   </nav>
   <p id="copyright-notes">
@@ -16,7 +19,7 @@
     <%= tweet_button %>
   </div>
   <div id="plusone-button">
-    <g:plusone annotation="inline"></g:plusone>
+    <%= google_plus_one_button %>
   </div>
   <div id="like-button">
     <%= facebook_like_button %>
