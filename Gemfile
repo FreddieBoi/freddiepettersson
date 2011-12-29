@@ -41,7 +41,7 @@ gem 'kaminari'
 gem 'activeadmin'
 gem 'tweet-button'
 gem 'client_side_validations'
-gem 'disqus'
+gem 'disqus', '>= 1.0.4'
 
 group :development do
 # To use debugger
