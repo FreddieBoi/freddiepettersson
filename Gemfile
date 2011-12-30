@@ -21,7 +21,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 # Doing this outside of assets block to make activeadmin work properly
-gem 'sass-rails',   '~> 3.1.5'
+gem 'sass-rails', '~> 3.1.5'
 
 gem 'jquery-rails'
 
@@ -34,17 +34,19 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
+gem 'inherited_resources'
+gem 'has_scope'
 gem 'friendly_id'
 gem 'gravatar_image_tag'
-gem "meta_search",    '>= 1.1.0.pre'
+gem 'meta_search', '>= 1.1.0.pre'
 gem 'kaminari'
 gem 'activeadmin'
 gem 'tweet-button'
-gem 'client_side_validations'
 gem 'disqus', '>= 1.0.4'
 
 group :development do
-# To use debugger
+  gem 'annotate', '2.4.1.beta1'
+  # To use debugger
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
 

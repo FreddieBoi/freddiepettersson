@@ -1,0 +1,23 @@
+<% title @job.title %>
+<h2><%= @job.title %></h2>
+<p>
+  <b>Company:</b>
+  <%= link_to @job.place.title, @job.place %>
+</p>
+<p>
+  <b>Location:</b>
+  <%= @job.place.location %>
+</p>
+<p>
+  <b>Website:</b>
+  <%= link_to @job.place.website %>
+</p>
+<p>
+  <b>Period:</b>
+  <%= "#{@job.started_at.month.to_s} #{@job.started_at.year}" %> - <%= @job.ended_at.blank? ? "Present" : "#{@job.ended_at.month.to_s} #{@job.ended_at.year}" %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @job.description %>
+</p>
+<%= raw(disqus_thread) %>

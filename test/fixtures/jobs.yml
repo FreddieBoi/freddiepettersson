@@ -1,0 +1,30 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  company: MyString
+  description: MyText
+  location: MyString
+  started_at: 2011-12-30
+  ended_at: 2011-12-30
+
+two:
+  title: MyString
+  company: MyString
+  description: MyText
+  location: MyString
+  started_at: 2011-12-30
+  ended_at: 2011-12-30
+# == Schema Information
+#
+# Table name: jobs
+#
+#  id          :integer         not null, primary key
+#  title       :string(255)     not null
+#  description :text
+#  started_at  :date            not null
+#  ended_at    :date
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+

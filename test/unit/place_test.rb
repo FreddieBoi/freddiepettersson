@@ -1,17 +1,19 @@
 require 'test_helper'
 
-class PageTest < ActiveSupport::TestCase
+class PlaceTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
 end
 # == Schema Information
 #
-# Table name: pages
+# Table name: places
 #
 #  id         :integer         not null, primary key
-#  title      :string(255)
-#  content    :text
+#  title      :string(255)     not null
+#  location   :string(255)     not null
+#  website    :string(255)
+#  job_id     :integer
 #  created_at :datetime
 #  updated_at :datetime
 #

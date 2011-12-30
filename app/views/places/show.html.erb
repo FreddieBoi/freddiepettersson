@@ -1,0 +1,11 @@
+<% title @place.title %>
+<h2><%= @place.title %></h2>
+<p>
+  <b>Location:</b>
+  <%= @place.location %>
+</p>
+<p>
+  <b>Website:</b>
+  <%= link_to @place.website %>
+</p>
+<%= raw(disqus_thread) %>

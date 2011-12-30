@@ -1,0 +1,18 @@
+<% title "Pages" %>
+<h2>Jobs</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Company</th>
+    <th>Started at</th>
+    <th>Ended at</th>
+  </tr>
+  <% @jobs.each do |job| %>
+  <tr>
+    <td><%= link_to job.title, job %></td>
+    <td><%= link_to job.place.title, job.place %></td>
+    <td><%= job.started_at %></td>
+    <td><%= job.ended_at %></td>
+  </tr>
+  <% end %>
+</table>
