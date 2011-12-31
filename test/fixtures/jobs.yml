@@ -2,17 +2,15 @@
 
 one:
   title: MyString
-  company: MyString
+  place: MyString
   description: MyText
-  location: MyString
   started_at: 2011-12-30
   ended_at: 2011-12-30
 
 two:
   title: MyString
-  company: MyString
+  place: MyString
   description: MyText
-  location: MyString
   started_at: 2011-12-30
   ended_at: 2011-12-30
 # == Schema Information
@@ -24,6 +22,7 @@ two:
 #  description :text
 #  started_at  :date            not null
 #  ended_at    :date
+#  place_id    :integer
 #  created_at  :datetime
 #  updated_at  :datetime
 #

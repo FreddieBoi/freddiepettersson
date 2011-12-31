@@ -10,11 +10,11 @@
 </p>
 <p>
   <b>Website:</b>
-  <%= link_to @job.place.website %>
+  <%= link_to @job.place.website, @job.place.website %>
 </p>
 <p>
   <b>Period:</b>
-  <%= "#{@job.started_at.month.to_s} #{@job.started_at.year}" %> - <%= @job.ended_at.blank? ? "Present" : "#{@job.ended_at.month.to_s} #{@job.ended_at.year}" %>
+  <%= @job.started_at.strftime('%B %Y') %> - <%= @job.ended_at.blank? ? "Present" : @job.ended_at.strftime('%B %Y') %>
 </p>
 <p>
   <b>Description:</b>

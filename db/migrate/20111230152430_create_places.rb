@@ -4,7 +4,6 @@ class CreatePlaces < ActiveRecord::Migration
       t.string :title, :null => false
       t.string :location, :null => false
       t.string :website
-      t.references :job
 
       t.timestamps
     end

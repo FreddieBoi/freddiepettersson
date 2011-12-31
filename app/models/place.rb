@@ -1,9 +1,10 @@
 class Place < ActiveRecord::Base
-  belongs_to :job
+  has_many :jobs, :dependent => :destroy
 
-  attr_accessible :title, :location, :website, :job
+  attr_accessible :title, :location, :website, :jobs
 
-  validates :job, :presence => true
+  validates :title, :presence => true
+  validates :location, :presence => true
 end
 # == Schema Information
 #
@@ -13,7 +14,6 @@ end
 #  title      :string(255)     not null
 #  location   :string(255)     not null
 #  website    :string(255)
-#  job_id     :integer
 #  created_at :datetime
 #  updated_at :datetime
 #

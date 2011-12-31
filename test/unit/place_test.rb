@@ -13,7 +13,6 @@ end
 #  title      :string(255)     not null
 #  location   :string(255)     not null
 #  website    :string(255)
-#  job_id     :integer
 #  created_at :datetime
 #  updated_at :datetime
 #

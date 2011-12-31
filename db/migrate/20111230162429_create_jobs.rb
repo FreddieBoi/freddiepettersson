@@ -5,6 +5,7 @@ class CreateJobs < ActiveRecord::Migration
       t.text :description
       t.date :started_at, :null => false
       t.date :ended_at
+      t.references :place
 
       t.timestamps
     end

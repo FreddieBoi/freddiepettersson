@@ -1,7 +1,11 @@
 class Job < ActiveRecord::Base
-  has_one :place, :dependent => :destroy
+  belongs_to :place
 
   attr_accessible :title, :description, :started_at, :ended_at, :place
+
+  validates :place, :presence => true
+  validates :title, :presence => true
+  validates :started_at, :presence => true
 end
 # == Schema Information
 #
@@ -12,6 +16,7 @@ end
 #  description :text
 #  started_at  :date            not null
 #  ended_at    :date
+#  place_id    :integer
 #  created_at  :datetime
 #  updated_at  :datetime
 #

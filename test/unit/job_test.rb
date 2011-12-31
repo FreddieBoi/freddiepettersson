@@ -14,6 +14,7 @@ end
 #  description :text
 #  started_at  :date            not null
 #  ended_at    :date
+#  place_id    :integer
 #  created_at  :datetime
 #  updated_at  :datetime
 #
