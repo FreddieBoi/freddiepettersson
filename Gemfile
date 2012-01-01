@@ -21,6 +21,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 # Doing this outside of assets block to make activeadmin work properly
+gem 'sass'
 gem 'sass-rails', '~> 3.1.5'
 
 gem 'jquery-rails'
