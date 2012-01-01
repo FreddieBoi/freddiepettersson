@@ -181,6 +181,7 @@ DEPENDENCIES
   annotate (= 2.4.1.beta1)
   coffee-rails (~> 3.1.1)
   disqus (>= 1.0.4)
+  formtastic (<= 1.2.4)
   friendly_id
   gravatar_image_tag
   has_scope
