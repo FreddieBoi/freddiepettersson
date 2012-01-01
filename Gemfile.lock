@@ -184,7 +184,7 @@ DEPENDENCIES
   friendly_id
   gravatar_image_tag
   has_scope
-  inherited_resources
+  inherited_resources (>= 1.2.2)
   jquery-rails
   kaminari
   meta_search (>= 1.1.0.pre)

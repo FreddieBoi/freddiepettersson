@@ -34,7 +34,7 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-gem 'inherited_resources'
+gem 'inherited_resources', '>= 1.2.2'
 gem 'has_scope'
 gem 'friendly_id'
 gem 'gravatar_image_tag'
