@@ -14,7 +14,7 @@
 </p>
 <p>
   <b>Period:</b>
-  <%= @job.started_at.strftime('%B %Y') %> - <%= @job.ended_at.blank? ? "Present" : @job.ended_at.strftime('%B %Y') %>
+  <%= @job.period %> (<%= distance_of_time_in_words(@job.ended_at.blank? ? DateTime.now : @job.ended_at, @job.started_at.prev_month) %>)
 </p>
 <p>
   <b>Description:</b>
