@@ -10,16 +10,18 @@
     <meta itemprop="description" content="Coffee, code, liquorice and punkrawk!">
   </head>
   <body>
-    <div id="container">
-      <%= render "layouts/header" %>
+    <%= render "layouts/header" %>
 
-      <% flash.each do |key, value| %>
+    <% flash.each do |key, value| %>
       <%= content_tag(:div, value, :class => "flash #{key}") %>
-      <% end %>
-
+    <% end %>
+    
+    <section>
       <%= yield %>
-      <%= render "layouts/footer" %>
-    </div>
+    </section>
+
+    <%= render "layouts/footer" %>
+    
     <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

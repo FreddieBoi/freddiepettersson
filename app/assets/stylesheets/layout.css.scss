@@ -1,34 +1,14 @@
-body {
+html, body {
+  margin: 0 auto 0;
+  padding: 0;
+  height: 100%;
   width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a {
-  color: #333;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #000;
-  }
+header {
+  margin: 0;
+  padding: 0;
+  height: 150px;
 }
     
 nav {
@@ -38,4 +18,33 @@ nav {
       display: inline-block;
     }
   }
+}
+
+section {
+  margin: 0;
+  padding: 0 25px 0;
+}
+
+footer {
+  height: 180px;
+  position: absolute;
+  width: 720px;
+  bottom: 0;
+}
+
+pre {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #eee;
+  font-size: 11px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+#like-button, iframe#facebook_like {
+  height: 80px;
 }
