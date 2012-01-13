@@ -9,9 +9,9 @@ puts 'Create a default user'
 AdminUser.create!(email: 'freddieboi@gmail.com', password: 'password', password_confirmation: 'password')
  
 puts 'Create default pages'
-Page.create!(id: 1, title: 'Home', content: 'Welcome to <a href="http://freddiepettersson.heroku.com/">freddiepettersson</a>!')
-Page.create!(id: 2, title: 'Contact', content: 'Feel free to contact me, <a href="mailto:freddieboi@gmail.com">Freddie Pettersson</a>.')
-Page.create!(id: 3, title: 'Bio', content: "My name is <strong>Freddie Pettersson</strong> and I'm into coffee, code, liquorice and punkrawk.")
+Page.create!(title: 'Home', content: 'Welcome to <a href="http://freddiepettersson.heroku.com/">freddiepettersson</a>!')
+Page.create!(title: 'Contact', content: 'Feel free to contact me, <a href="mailto:freddieboi@gmail.com">Freddie Pettersson</a>.')
+Page.create!(title: 'Bio', content: "My name is <strong>Freddie Pettersson</strong> and I'm into coffee, code, liquorice and punkrawk.")
 
 puts 'Create places'
 chillbro = Place.create!(title: 'chillbro studios AB', location: 'Linkoping, Sweden', website: 'http://chillbro.net/')

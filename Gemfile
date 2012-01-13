@@ -37,11 +37,11 @@ gem 'jquery-rails'
 
 gem 'inherited_resources', '>= 1.2.2'
 gem 'has_scope'
-gem 'friendly_id'
+gem 'friendly_id', '~> 4.0.0'
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'kaminari'
 gem 'formtastic', '<= 1.2.4'
-gem 'activeadmin'
+gem 'activeadmin', '>= 0.3.4'
 gem 'tweet-button'
 gem 'disqus', '>= 1.0.4'
 

@@ -1,7 +1,7 @@
 class Job < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
   extend FriendlyId
-  friendly_id :title, use: [:slugged, :history]
+  friendly_id :title, use: :slugged
 
   belongs_to :place
 
