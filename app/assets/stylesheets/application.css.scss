@@ -55,40 +55,54 @@ a {
 }
 
 header {
-  text-align: center;
-  background-image: linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
-  background-image: -o-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
-  background-image: -moz-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
-  background-image: -webkit-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
-  background-image: -ms-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0, darken($highlight-color, 20%)),
-    color-stop(1, $highlight-color)
-  );
-  h1 {
-    @include text-shadow;
-    padding: 45px 0 25px;
-    a {
+  #heading {
+    text-align: center;
+    background-image: linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+    background-image: -o-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+    background-image: -moz-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+    background-image: -webkit-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+    background-image: -ms-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, darken($highlight-color, 20%)),
+      color-stop(1, $highlight-color)
+    );
+    h1 {
       @include text-shadow;
       color: #fff;
-      text-decoration: none;
-      &:visited {
+      padding: 45px 0 25px;
+      a {
         @include text-shadow;
         color: #fff;
         text-decoration: none;
-      }
-      &:hover {
-        @include text-shadow;
-        color: #fff;
-        text-decoration: none;
+        &:visited {
+          @include text-shadow;
+          color: #fff;
+          text-decoration: none;
+        }
+        &:hover {
+          @include text-shadow;
+          color: #fff;
+          text-decoration: none;
+        }
       }
     }
+    em {
+      @include text-shadow;
+    }
   }
-  em {
-    @include text-shadow;
+  #header-nav {
+    background-color: $dark-background-color;
+    border-top: $sharp-border;
+    border-bottom: $sharp-border;
+    font-size: 17px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    li {
+      padding: 5px 25px 5px;
+    }
   }
 }
 
@@ -108,62 +122,42 @@ footer {
   font-size: 13px;
   background-color: $dark-background-color;
   border-top: $sharp-border;
+  #footer-nav {
+    text-align: center;
+    ul {
+      padding-top: 25px;
+    }
+  }
+  #copyright-notes {
+    text-align: center;
+  }
+  #social {
+    padding: 0 25px 0;
+  }
   p {
     font-size: 13px;
   }
 }
 
-#footer-nav {
-  text-align: center;
-  ul {
-    padding-top: 25px;
-  }
-}
-
-#header-nav {
-  font-size: 17px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: $dark-background-color;
-  li {
-    padding: 5px 25px 5px;
-  }
-  border-top: $sharp-border;
-  border-bottom: $sharp-border;
-}
-
-h1, h2, h3 {
-  color: #fff;
-  @include text-shadow;
-}
-
-h2 {
-  font-size: 21px;
-}
-
-h3 {
-  font-size: 17px;
-}
-
-p {
-  font-size: 15px;
-}
-
-#copyright-notes {
-  text-align: center;
-}
-
-#social {
-  padding: 0 25px 0;
-}
-
 section#content {
   background-color: $background-color;
   padding-top: 25px;
-}
-
-#disqus_thread {
-  padding-top: 50px;
+  h1, h2, h3 {
+    color: #fff;
+    @include text-shadow;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 15px;
+  }
+  #disqus_thread {
+    padding-top: 50px;
+  }
 }
 
 @import "pages.css.scss";

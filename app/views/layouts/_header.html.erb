@@ -1,28 +1,30 @@
 <header>
-  <h1><%= link_to "Freddie Pettersson", root_path %></h1>
-  <p>
-    <em>Coffee, code, licorice and punkrawk!</em>
-  </p>
+  <div id="heading">
+    <h1><%= link_to "Freddie Pettersson", root_path %></h1>
+    <p>
+      <em>Coffee, code, licorice and punkrawk!</em>
+    </p>
+  </div>
+  <nav id="header-nav">
+    <ul>
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to "Contact", contact_path %>
+      </li>
+      <li>
+        <%= link_to "Bio", bio_path %>
+      </li>
+      <li>
+        <%= link_to "Jobs", jobs_path %>
+      </li>
+      <li>
+        <%= link_to "Places", places_path %>
+      </li>
+      <li>
+        <%= link_to "Admin", admin_dashboard_path %>
+      </li>
+    </ul>
+  </nav>
 </header>
-<nav id="header-nav">
-  <ul>
-    <li>
-      <%= link_to "Home", root_path %>
-    </li>
-    <li>
-      <%= link_to "Contact", contact_path %>
-    </li>
-    <li>
-      <%= link_to "Bio", bio_path %>
-    </li>
-    <li>
-      <%= link_to "Jobs", jobs_path %>
-    </li>
-    <li>
-      <%= link_to "Places", places_path %>
-    </li>
-    <li>
-      <%= link_to "Admin", admin_dashboard_path %>
-    </li>
-  </ul>
-</nav>
