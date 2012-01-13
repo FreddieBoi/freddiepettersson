@@ -1,3 +1,17 @@
+/*
+ *= require_self
+*/
+
+$highlight-color: #009999;
+$background-color: #373737;
+$dark-background-color: darken($background-color, 10%);
+$sharp-border: 2px solid #000;
+
+@mixin text-shadow {
+  text-shadow: 1px 1px 2px #000;
+  filter: dropshadow(color=#000, offx=1, offy=1);
+}
+
 @import "layout.css.scss";
 
 #notice, #error, #alert {
@@ -15,46 +29,66 @@
 }
 
 pre {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 15px;
-  background-color: #eee;
+  background-color: $dark-background-color;
   font-size: 11px;
+  padding: 15px;
+}
+
+html, body {
+  background-color: $background-color;
+  color: #999;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  -webkit-box-shadow: 0px 0px 50px 0px #000;
+  -moz-box-shadow: 0px 0px 50px 0px #000;
+  box-shadow: 0px 0px 50px 0px #000;
+  line-height: 18px;
 }
 
 a {
-  color: #009999;
-  text-shadow: 2px 2px 2px #000;
+  @include text-shadow;
+  color: $highlight-color;
   text-decoration: none;
   &:hover {
     color: #fff;
   }
 }
 
-html, body {
-  background-color: #373737;
-  color: #999;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  box-shadow: 0 0 100px #000;
-  line-height: 18px;
-  border-left: 1px solid #000;
-  border-right: 2px solid #000;
-}
-
 header {
   text-align: center;
+  background-image: linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+  background-image: -o-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+  background-image: -moz-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+  background-image: -webkit-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
+  background-image: -ms-linear-gradient(bottom, darken($highlight-color, 20%) 0%, $highlight-color 100%);
   background-image: -webkit-gradient(
     linear,
     left bottom,
     left top,
-    color-stop(0, rgb(0,0,0)),
-    color-stop(1, rgb(0,99,99))
+    color-stop(0, darken($highlight-color, 20%)),
+    color-stop(1, $highlight-color)
   );
-  border-bottom: 2px solid #000;
+  h1 {
+    @include text-shadow;
+    padding: 45px 0 25px;
+    a {
+      @include text-shadow;
+      color: #fff;
+      text-decoration: none;
+      &:visited {
+        @include text-shadow;
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover {
+        @include text-shadow;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
   em {
-    text-shadow: 2px 2px 2px #000;
+    @include text-shadow;
   }
 }
 
@@ -69,13 +103,14 @@ ul, li {
 }
 
 footer {
-  padding: 18px auto 0;
+  padding: 18px 0 0;
+  margin: 0;
   font-size: 13px;
+  background-color: $dark-background-color;
+  border-top: $sharp-border;
   p {
     font-size: 13px;
   }
-  background: #000;
-  border-top: 2px solid #000;
 }
 
 #footer-nav {
@@ -89,21 +124,17 @@ footer {
   font-size: 17px;
   padding-top: 4px;
   padding-bottom: 4px;
-  background: #222222;
-  border-bottom: 2px solid #000;
+  background-color: $dark-background-color;
   li {
     padding: 5px 25px 5px;
   }
+  border-top: $sharp-border;
+  border-bottom: $sharp-border;
 }
 
 h1, h2, h3 {
   color: #fff;
-  text-shadow: 2px 2px 2px #000;
-}
-
-h1 {
-  padding: 45px 0 25px;
-  text-shadow: 2px 2px 2px #000;
+  @include text-shadow;
 }
 
 h2 {
@@ -126,7 +157,8 @@ p {
   padding: 0 25px 0;
 }
 
-section {
+section#content {
+  background-color: $background-color;
   padding-top: 25px;
 }
 
@@ -135,3 +167,5 @@ section {
 }
 
 @import "pages.css.scss";
+@import "jobs.css.scss";
+@import "places.css.scss";

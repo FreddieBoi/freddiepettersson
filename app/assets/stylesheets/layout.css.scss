@@ -1,8 +1,10 @@
+$width: 720px;
+
 html, body {
   margin: 0 auto 0;
   padding: 0;
   height: 100%;
-  width: 720px;
+  width: $width;
 }
 
 header {
@@ -28,17 +30,15 @@ section {
 footer {
   height: 180px;
   position: absolute;
-  width: 720px;
   bottom: 0;
+  width: $width;
 }
 
 pre {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 15px;
-  background-color: #eee;
-  font-size: 11px;
+  margin: 0;
 }
 
 h1, h2, h3 {
