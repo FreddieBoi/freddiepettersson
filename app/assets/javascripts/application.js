@@ -9,35 +9,3 @@
 //= require jquery_ujs
 //= require_self
 //= require_tree .
-
-// Animate the flash if any message to show
-function animate_flash() {
-  // Nothing to show? Get out!
-  if(!$(".flash").html()) {
-    return;
-  }
-
-  var flash = $(".flash");
-
-  // Wait a bit, then fadeOut and hide
-  setTimeout(function() {
-    flash.fadeOut(800, function() {
-      flash.hide();
-    });
-  }, 3000);
-}
-
-$(function() {
-  // Animate flash if any message
-  animate_flash();
-
-  // Google +1 Button
-  (function() {
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
-  })();
-});
