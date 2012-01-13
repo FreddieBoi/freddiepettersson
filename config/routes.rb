@@ -10,9 +10,9 @@ Freddiepettersson::Application.routes.draw do
 
   resources :pages, :only => [:index, :show]
 
-  root :controller => "pages", :action => "show", :id => "1"
+  root :controller => "pages", :action => "show", :id => "home"
 
-  match "contact", :controller => "pages", :action => "show", :id => "2"
-  match "bio", :controller => "pages", :action => "show", :id => "3"
+  match "contact", :controller => "pages", :action => "show", :id => "contact"
+  match "bio", :controller => "pages", :action => "show", :id => "bio"
 
 end

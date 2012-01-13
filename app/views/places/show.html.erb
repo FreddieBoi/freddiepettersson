@@ -8,4 +8,20 @@
   <b>Website:</b>
   <%= link_to @place.website, @place.website %>
 </p>
+<h3>Jobs</h3>
+<p>
+  I've had <%= pluralize(@place.jobs.count, "job", "different jobs") %> at <%= link_to @place.title, @place %>.
+</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Period</th>
+  </tr>
+  <% @place.jobs.each do |job| %>
+  <tr>
+    <td><%= link_to job.title, job %></td>
+    <td><%= job.period %> (<%= job.period_length %>)</td>
+  </tr>
+  <% end %>
+</table>
 <%= raw(disqus_thread) %>

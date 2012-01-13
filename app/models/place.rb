@@ -1,4 +1,7 @@
 class Place < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
   has_many :jobs, :dependent => :destroy
 
   attr_accessible :title, :location, :website, :jobs
@@ -16,5 +19,6 @@ end
 #  website    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  slug       :string(255)
 #
 

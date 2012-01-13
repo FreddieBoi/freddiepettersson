@@ -1,4 +1,8 @@
 class Job < ActiveRecord::Base
+  include ActionView::Helpers::DateHelper
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
   belongs_to :place
 
   attr_accessible :title, :description, :started_at, :ended_at, :place
@@ -10,6 +14,11 @@ class Job < ActiveRecord::Base
   # Only showing year and month. The word "Present" is used if :ended_at is null.
   def period
     "#{self.started_at.strftime('%B %Y')} - #{self.ended_at.blank? ? "Present" : self.ended_at.strftime('%B %Y')}"
+  end
+
+  # Get the working period length as properly formatted string
+  def period_length
+    distance_of_time_in_words(self.ended_at.blank? ? DateTime.now : self.ended_at, self.started_at.prev_month)
   end
 end
 # == Schema Information
@@ -24,5 +33,6 @@ end
 #  place_id    :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  slug        :string(255)
 #
 

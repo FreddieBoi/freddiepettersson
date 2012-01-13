@@ -1,7 +1,7 @@
 <% title "Jobs" %>
 <h2>Jobs</h2>
 <p>
-  This is a listing of my <strong>experience</strong>.
+  This is a listing of my professional experience.
 </p>
 <table>
   <tr>
@@ -13,7 +13,7 @@
   <tr>
     <td><%= link_to job.title, job %></td>
     <td><%= link_to job.place.title, job.place %></td>
-    <td><%= job.period %> (<%= distance_of_time_in_words(job.ended_at.blank? ? DateTime.now : job.ended_at, job.started_at.prev_month) %>)</td>
+    <td><%= job.period %> (<%= job.period_length %>)</td>
   </tr>
   <% end %>
 </table>

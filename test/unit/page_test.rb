@@ -10,9 +10,10 @@ end
 # Table name: pages
 #
 #  id         :integer         not null, primary key
-#  title      :string(255)
+#  title      :string(255)     not null
 #  content    :text
 #  created_at :datetime
 #  updated_at :datetime
+#  slug       :string(255)
 #
 

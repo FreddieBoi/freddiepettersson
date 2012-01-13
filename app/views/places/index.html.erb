@@ -8,12 +8,14 @@
     <th>Title</th>
     <th>Location</th>
     <th>Website</th>
+    <th>Jobs</th>
   </tr>
   <% @places.each do |place| %>
   <tr>
     <td><%= link_to place.title, place %></td>
     <td><%= place.location %></td>
-    <td><%= place.website %></td>
+    <td><%= link_to place.website, place.website %></td>
+    <td><%= place.jobs.count %></td>
   </tr>
   <% end %>
 </table>

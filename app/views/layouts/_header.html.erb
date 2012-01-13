@@ -1,5 +1,5 @@
 <header>
-  <h1>Freddie Pettersson</h1>
+  <h1><%= link_to "Freddie Pettersson", root_path %></h1>
   <p>
     <em>Coffee, code, licorice and punkrawk!</em>
   </p>
@@ -14,6 +14,15 @@
     </li>
     <li>
       <%= link_to "Bio", bio_path %>
+    </li>
+    <li>
+      <%= link_to "Jobs", jobs_path %>
+    </li>
+    <li>
+      <%= link_to "Places", places_path %>
+    </li>
+    <li>
+      <%= link_to "Admin", admin_dashboard_path %>
     </li>
   </ul>
 </nav>

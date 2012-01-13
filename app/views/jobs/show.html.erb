@@ -14,10 +14,9 @@
 </p>
 <p>
   <b>Period:</b>
-  <%= @job.period %> (<%= distance_of_time_in_words(@job.ended_at.blank? ? DateTime.now : @job.ended_at, @job.started_at.prev_month) %>)
+  <%= @job.period %> (<%= @job.period_length %>)
 </p>
 <p>
-  <b>Description:</b>
   <%= @job.description %>
 </p>
 <%= raw(disqus_thread) %>
