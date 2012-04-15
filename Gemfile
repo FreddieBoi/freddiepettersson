@@ -35,14 +35,14 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-gem 'inherited_resources', '>= 1.2.2'
-gem 'has_scope'
+gem 'inherited_resources', '>= 1.3.1'
+gem 'has_scope', '>= 0.5.1'
 gem 'friendly_id', '~> 4.0.0'
-gem 'meta_search', '>= 1.1.0.pre'
-gem 'kaminari'
-gem 'formtastic', '<= 1.2.4'
-gem 'activeadmin', '>= 0.3.4'
-gem 'tweet-button'
+gem 'meta_search', '>= 1.1.3'
+gem 'kaminari', '>= 0.13.0'
+gem "formtastic", "~> 2.1.1"
+gem "activeadmin", "~> 0.4.3"
+gem 'tweet-button', '>= 0.1.0'
 gem 'disqus', '>= 1.0.4'
 
 group :development do
