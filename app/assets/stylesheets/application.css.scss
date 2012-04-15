@@ -5,12 +5,19 @@
 $highlight-color: #009999;
 $background-color: #373737;
 $dark-background-color: darken($background-color, 10%);
+$light-background-color: lighten($background-color, 10%);
 $sharp-border: 2px solid #000;
 $logo-padding: 145px;
 
 @mixin text-shadow {
   text-shadow: 1px 1px 2px #000;
   filter: dropshadow(color=#000, offx=1, offy=1);
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 0px 50px 0px #000;
+  -moz-box-shadow: 0px 0px 50px 0px #000;
+  box-shadow: 0px 0px 50px 0px #000;
 }
 
 @import "layout.css.scss";
@@ -36,13 +43,11 @@ pre {
 }
 
 html, body {
-  background-color: $background-color;
-  color: #999;
+  @include box-shadow;
+  background-color: $light-background-color;
+  color: #bbb;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  -webkit-box-shadow: 0px 0px 50px 0px #000;
-  -moz-box-shadow: 0px 0px 50px 0px #000;
-  box-shadow: 0px 0px 50px 0px #000;
   line-height: 18px;
 }
 
@@ -71,6 +76,7 @@ header {
       color-stop(1, $highlight-color)
     );
     img {
+      @include box-shadow;
       position: relative;
       margin-left: 145-$width;
       bottom: 105px;
@@ -98,6 +104,7 @@ header {
     }
     em {
       @include text-shadow;
+      font-size: 17px;
     }
   }
   #header-nav {
@@ -149,21 +156,36 @@ footer {
 section#content {
   background-color: $background-color;
   padding-top: 25px;
+  padding-bottom: 25px;
   h1, h2, h3 {
-    color: #fff;
     @include text-shadow;
+    color: #fff;
+    padding-bottom: 10px;
   }
   h2 {
     font-size: 21px;
   }
   h3 {
-    font-size: 17px;
-  }
-  p {
     font-size: 15px;
   }
   #disqus_thread {
     padding-top: 50px;
+  }
+}
+
+table {
+  @include box-shadow;
+  background-color: $light-background-color;
+  border: 2px solid #000;
+  padding-bottom: 20px;
+  border-collapse: collapse;
+  color: #fff;
+  th {
+    @include text-shadow;
+  }
+  td, th {
+    padding: 0px 15px;
+    border: 1px solid #000;
   }
 }
 
