@@ -177,6 +177,7 @@ table {
   @include box-shadow;
   background-color: $light-background-color;
   border: 2px solid #000;
+  padding-top: 20px;
   padding-bottom: 20px;
   border-collapse: collapse;
   color: #fff;
@@ -184,7 +185,7 @@ table {
     @include text-shadow;
   }
   td, th {
-    padding: 0px 15px;
+    padding: 0px 5px;
     border: 1px solid #000;
   }
 }
