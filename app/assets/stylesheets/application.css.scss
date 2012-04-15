@@ -6,6 +6,7 @@ $highlight-color: #009999;
 $background-color: #373737;
 $dark-background-color: darken($background-color, 10%);
 $sharp-border: 2px solid #000;
+$logo-padding: 145px;
 
 @mixin text-shadow {
   text-shadow: 1px 1px 2px #000;
@@ -69,6 +70,12 @@ header {
       color-stop(0, darken($highlight-color, 20%)),
       color-stop(1, $highlight-color)
     );
+    img {
+      position: relative;
+      margin-left: 145-$width;
+      bottom: 105px;
+      border: 2px solid #000;
+    }
     h1 {
       @include text-shadow;
       color: #fff;
