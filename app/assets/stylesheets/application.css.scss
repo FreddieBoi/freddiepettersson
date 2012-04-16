@@ -14,10 +14,17 @@ $logo-padding: 145px;
   filter: dropshadow(color=#000, offx=1, offy=1);
 }
 
-@mixin box-shadow {
-  -webkit-box-shadow: 0px 0px 50px 0px #000;
-  -moz-box-shadow: 0px 0px 50px 0px #000;
-  box-shadow: 0px 0px 50px 0px #000;
+@mixin rounded-corners($radius: 10px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($radius: 50px, $color: #000) {
+  -webkit-box-shadow: 0px 0px $radius 0px $color;
+  -moz-box-shadow: 0px 0px $radius 0px $color;
+  box-shadow: 0px 0px $radius 0px $color;
 }
 
 @import "layout.css.scss";
@@ -76,11 +83,11 @@ header {
       color-stop(1, $highlight-color)
     );
     img {
-      @include box-shadow;
+      @include box-shadow($radius: 10px);
+      @include rounded-corners;
       position: relative;
       margin-left: 145-$width;
       bottom: 105px;
-      border: 2px solid #000;
     }
     h1 {
       @include text-shadow;
